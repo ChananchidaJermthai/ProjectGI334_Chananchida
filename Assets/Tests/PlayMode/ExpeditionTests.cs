@@ -18,6 +18,10 @@ namespace Colonization.Tests
             game = Object.FindAnyObjectByType<GameManager>();
             Assert.That(game,Is.Not.Null);
             Object.FindAnyObjectByType<GameUI>().CloseModal();
+            Unit ship=game.Units.First(u=>u.Data.naval);
+            ship.Place(game.Hexes[new Vector2Int(18,8)]);
+            while(ship.Passengers.Count>0) { SelectUnit(ship);game.Disembark(game.Hexes[new Vector2Int(17,8)]); }
+            game.EndTurn();
         }
         private void SelectUnit(Unit unit)
         {
@@ -124,6 +128,32 @@ namespace Colonization.Tests
         {
             var button=Object.FindObjectsByType<UnityEngine.UI.Button>().First(b=>b.name==name);
             button.onClick.Invoke();
+        }
+        [UnityTest]
+        public IEnumerator TownWorkersCanDragToEverySurroundingHexAndBackToUnemployment()
+        {
+            Unit colonist=game.Units.First(u=>u.Data.colonist);SelectUnit(colonist);game.FoundTown();game.EndTurn();
+            game.OpenTown();yield return null;
+            Town town=game.Towns[0];Assert.That(town.Residents.Count,Is.EqualTo(2));
+            Assert.That(town.WorkArea.Count,Is.EqualTo(6));
+            Town.Resident worker=town.Residents[0];
+            foreach(Hex hex in town.WorkArea)
+            {
+                TownDropSlot slot=Object.FindObjectsByType<TownDropSlot>().Single(s=>s.Hex==hex);
+                yield return TownDragDriver.Drag(worker,slot);
+            }
+            TownDropSlot unemployed=Object.FindObjectsByType<TownDropSlot>().Single(s=>s.Hex==null);
+            yield return TownDragDriver.Drag(worker,unemployed);
+            Assert.That(town.Residents.Count,Is.EqualTo(2));
+            Assert.That(town.Residents.Count(r=>r.Workplace!=null),Is.Zero);
+            Hex productive=town.WorkArea.First(h=>h.HasForest);
+            TownDropSlot productiveSlot=Object.FindObjectsByType<TownDropSlot>().Single(s=>s.Hex==productive);
+            yield return TownDragDriver.Drag(worker,productiveSlot);
+            int food=town.Food,lumber=town.Lumber,foodYield=town.FoodPerTurn,lumberYield=town.LumberPerTurn;
+            Object.FindObjectsByType<UnityEngine.UI.Button>().Single(b=>b.name=="End turn"&&b.transform.parent.name=="TownPanel").onClick.Invoke();
+            Assert.That(town.Food,Is.EqualTo(food+foodYield));Assert.That(town.Lumber,Is.EqualTo(lumber+lumberYield));
+            Capture("08-town-workers");
+            Object.FindAnyObjectByType<TownView>().Close();yield return null;Assert.That(game.ModalOpen,Is.False);
         }
         private static void Capture(string name)
         {

@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Colonization.Runtime::Colonization.Hex
   terrainRenderer: {fileID: 6974995750133428948}
+  revealOnStart: 1
 --- !u!60 &2818413006888360972
 PolygonCollider2D:
   m_ObjectHideFlags: 0

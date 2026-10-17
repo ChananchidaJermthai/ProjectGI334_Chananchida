@@ -75,9 +75,10 @@ namespace Colonization
                 else if (moisture > .52f) kind = TerrainKind.Grassland;
                 else kind = elevation < .45f ? TerrainKind.Prairie : TerrainKind.Plain;
                 if (x == 17 && y == 8) kind = TerrainKind.Plain;
-                if (x == 18 && y == 8) kind = TerrainKind.Ocean;
+                if (x == 16 && y == 8) kind = TerrainKind.Grassland;
+                if (x >= 18 && y == 8) kind = TerrainKind.Ocean;
                 Hex hex = Instantiate(hexPrefab, mapRoot);
-                hex.Initialize(new Vector2Int(x, y), catalog.Terrain(kind), random.NextDouble() < .38);
+                hex.Initialize(new Vector2Int(x, y), catalog.Terrain(kind), ((x == 17 || x == 16) && y == 8) || random.NextDouble() < .38);
                 hexes.Add(hex.Cell, hex);
             }
             for (int i = 0; i < catalog.nativeNations.Length; i++)
@@ -90,11 +91,11 @@ namespace Colonization
                 village.transform.SetParent(townRoot); village.transform.position = hex.transform.position + new Vector3(0, .15f, -1);
                 var art = new GameObject("Village Artwork").AddComponent<SpriteRenderer>(); art.transform.SetParent(village.transform, false);
                 hex.NativeNation.village.Apply(art, new Vector2(1.65f, 1.65f)); art.sortingOrder = 1000 - hex.Cell.y * 10;
-                villages.Add(hex, village); village.SetActive(false);
+                villages.Add(hex, village); village.SetActive(hex.Explored);
             }
-            Spawn(catalog.landUnits[0], hexes[new Vector2Int(17, 8)]);
-            Spawn(catalog.landUnits[2], hexes[new Vector2Int(17, 8)]);
-            Spawn(catalog.ships[0], hexes[new Vector2Int(18, 8)]);
+            Unit ship = Spawn(catalog.ships[0], hexes[new Vector2Int(22, 8)]);
+            Spawn(catalog.landUnits[0], ship.CurrentHex).Board(ship);
+            Spawn(catalog.landUnits[2], ship.CurrentHex).Board(ship);
             worldMaterial = new Material(Shader.Find("Sprites/Default"));
             selection = new GameObject("Selected Hex Outline").AddComponent<LineRenderer>();
             selection.transform.SetParent(transform); selection.sharedMaterial = worldMaterial;
@@ -117,6 +118,7 @@ namespace Colonization
                 if (keyboard.bKey.wasPressedThisFrame) FoundTown();
                 if (keyboard.pKey.wasPressedThisFrame) ClearForest();
                 if (keyboard.tabKey.wasPressedThisFrame) NextUnit();
+                if (keyboard.tKey.wasPressedThisFrame) OpenTown();
             }
             if (mouse == null || (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())) return;
             if (!mouse.leftButton.wasPressedThisFrame && !mouse.rightButton.wasPressedThisFrame) return;
@@ -127,6 +129,19 @@ namespace Colonization
             if (mouse.leftButton.wasPressedThisFrame) Select(hex); else MoveSelected(hex);
         }
         public void SetModal(bool open) { ModalOpen = open; cameraController.Locked = open; }
+        public void OpenTown()
+        {
+            Town town = SelectedHex == null ? null : SelectedHex.Town;
+            if (town == null) { Notify("Select your colony, then choose Open town [T]."); return; }
+            for (int i = units.Count - 1; i >= 0; i--)
+            {
+                Unit unit = units[i];
+                if (unit.CurrentHex != town.Hex || unit.Data.naval || unit.Carrier != null || orders.ContainsKey(unit)) continue;
+                town.AddResident(unit); units.RemoveAt(i);
+                if (SelectedUnit == unit) SelectedUnit = null;
+            }
+            ui.ShowTown(town);
+        }
         public void Notify(string message) { Message = message; Changed?.Invoke(); }
         public void Select(Hex hex)
         {
@@ -262,8 +277,8 @@ namespace Colonization
                 obj.transform.position = hex.transform.position + new Vector3(0, .1f, -1);
                 var renderer = new GameObject("Temporary Colony Artwork").AddComponent<SpriteRenderer>(); renderer.transform.SetParent(obj.transform, false);
                 catalog.nativeNations[0].village.Apply(renderer, new Vector2(1.6f, 1.6f)); renderer.sortingOrder = 1000 - hex.Cell.y * 10;
-                Town town = obj.AddComponent<Town>(); town.Initialize("New Colony " + (towns.Count + 1), hex); towns.Add(town);
-                units.Remove(unit); if (SelectedUnit == unit) SelectedUnit = null; Destroy(unit.gameObject);
+                Town town = obj.AddComponent<Town>(); town.Initialize("New Colony " + (towns.Count + 1), hex); town.ConfigureWorkArea(Neighbors(hex)); towns.Add(town);
+                town.AddResident(unit); units.Remove(unit); if (SelectedUnit == unit) SelectedUnit = null;
             }
             orders.Clear();
             foreach (Unit unit in units) unit.NewTurn();

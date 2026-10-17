@@ -29,6 +29,7 @@ namespace Colonization
             canvas.GetComponent<Canvas>().sortingOrder = 5000;
             var scaler = canvas.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920,1080); scaler.matchWidthOrHeight = .5f;
+            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
             root = canvas.GetComponent<RectTransform>();
             if (EventSystem.current == null)
                 new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule)).transform.SetParent(transform);
@@ -46,7 +47,9 @@ namespace Colonization
             selectedImage = Picture(sidebar,null,76,76,250,210);
             infoText = Label(sidebar,"",24,310,358,270,20,ink);
             Button(sidebar,"Next unit  [Tab]",24,592,358,48,() => game.NextUnit());
-            Button(sidebar,"Meet leader / village",24,652,358,48,() => game.InspectNative());
+            Button(sidebar,"Open town [T] / Meet leader",24,652,358,48,() => {
+                if(game.SelectedHex != null && game.SelectedHex.Town != null) game.OpenTown(); else game.InspectNative();
+            });
             Button(sidebar,"Focus selected",24,712,358,44,() => {
                 if(game.SelectedHex != null) Camera.main.GetComponent<CameraController>().Focus(game.SelectedHex.transform.position);
             });
@@ -98,6 +101,10 @@ namespace Colonization
             selectedImage.sprite = image; selectedImage.enabled = image != null;
         }
         public void CloseModal() { modalShade.SetActive(false); game.SetModal(false); }
+        public void ShowTown(Town town)
+        {
+            CloseModal(); gameObject.AddComponent<TownView>().Show(game,town,root);
+        }
         private void OpenModal(string title)
         {
             foreach(Transform child in content) { child.gameObject.SetActive(false); Destroy(child.gameObject); }
@@ -108,7 +115,7 @@ namespace Colonization
             OpenModal("COLONIZATION  /  Your New World");
             Picture(content,game.Catalog.nativeNations[0].village.sprite,30,45,440,420);
             Label(content,"BUILD YOUR FIRST COLONY",520,32,930,52,33,gold);
-            Label(content,"Explore a hex world made with your own artwork.\n\n1. Select the Free Colonist, then press B to plan a colony.\n2. End the turn to complete it and collect Food and Lumber.\n3. Use Recruit / build to create any of your 20 units or 6 ships.\n4. Explore inland and select Native villages to meet their leaders.\n\nClick a stacked unit again to cycle. Right-click ocean beside a\nship to board; right-click adjacent land from the ship to disembark.",520,110,930,350,23,ink);
+            Label(content,"Explore a hex world made with your own artwork.\n\n1. Sail west to the coast with your Colonist and Pioneer aboard.\n2. Disembark both passengers, then end the turn.\n3. Use Pioneer [P] to clear forest; Colonist [B] to found a town.\n4. Open town [T] and drag residents onto the six surrounding hexes.\n\nClick a stacked unit again to cycle. Right-click adjacent land\nfrom a loaded ship to disembark. Work completes next turn.",520,110,930,350,23,ink);
             Label(content,"Prototype: colony production and recruitment use simple editable rules.\nNative village art is temporarily reused for player colonies.",520,468,930,66,18,gold);
             Button(content,"Begin expedition",520,562,310,58,CloseModal);
             Button(content,"Browse your artwork",850,562,350,58,ShowCatalog);

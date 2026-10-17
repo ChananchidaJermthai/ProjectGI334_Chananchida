@@ -149,6 +149,7 @@ namespace Colonization.Editor
         {
             var obj=new GameObject("Hex",typeof(Hex),typeof(PolygonCollider2D));
             obj.GetComponent<Hex>().ConfigureRenderer(Renderer(obj.transform,material));
+            obj.GetComponent<Hex>().ConfigureVisibility(true);
             var points=new Vector2[6];for(int i=0;i<6;i++){float a=(90+i*60)*Mathf.Deg2Rad;points[i]=new Vector2(Mathf.Cos(a)*1.5f,Mathf.Sin(a)*1.5f);}
             obj.GetComponent<PolygonCollider2D>().points=points;
             GameObject prefab=PrefabUtility.SaveAsPrefabAsset(obj,PrefabRoot+"Hex.prefab");UnityEngine.Object.DestroyImmediate(obj);return prefab.GetComponent<Hex>();
@@ -166,6 +167,15 @@ namespace Colonization.Editor
             foreach(UnitData unit in catalog.landUnits.Concat(catalog.ships)) if(unit.art?.sprite==null) throw new InvalidOperationException("Unit missing artwork.");
             foreach(NativeNationData nation in catalog.nativeNations)
                 if(nation.portrait==null||nation.emblem==null||nation.village?.sprite==null||nation.profile==null) throw new InvalidOperationException("Nation missing artwork.");
+        }
+        public static void EnableWalkthroughVisibility()
+        {
+            string path=PrefabRoot+"Hex.prefab";
+            GameObject root=PrefabUtility.LoadPrefabContents(path);
+            try { root.GetComponent<Hex>().ConfigureVisibility(true);PrefabUtility.SaveAsPrefabAsset(root,path); }
+            finally { PrefabUtility.UnloadPrefabContents(root); }
+            AssetDatabase.SaveAssets();
+            Debug.Log("COLONIZATION_ALL_HEXES_VISIBLE");
         }
         public static void BuildWindows()
         {

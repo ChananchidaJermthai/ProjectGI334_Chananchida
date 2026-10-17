@@ -5,6 +5,7 @@ namespace Colonization
     public sealed class Hex : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer terrainRenderer;
+        [SerializeField, Tooltip("Show every hex from the beginning for the production walkthrough.")] private bool revealOnStart = true;
         public Vector2Int Cell { get; private set; }
         public HexData Data { get; private set; }
         public bool HasForest { get; private set; }
@@ -12,9 +13,11 @@ namespace Colonization
         public NativeNationData NativeNation { get; set; }
         public Town Town { get; set; }
         public void ConfigureRenderer(SpriteRenderer value) => terrainRenderer = value;
+        public void ConfigureVisibility(bool revealAll) => revealOnStart = revealAll;
         public void Initialize(Vector2Int cell, HexData data, bool forest)
         {
             Cell = cell; Data = data; HasForest = forest && data.forest != null && data.forest.sprite != null;
+            Explored = revealOnStart;
             transform.position = HexRules.Position(cell);
             name = $"Hex {cell.x},{cell.y} {data.kind}";
             RefreshArt();

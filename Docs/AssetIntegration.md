@@ -26,21 +26,29 @@ Textures import as Single sprites with alpha transparency, no mipmaps, and a max
 - Left-click a discovered hex: select. Click repeatedly to cycle stacked units.
 - Right-click: route selected unit toward the hex, within its movement budget.
 - Tab: next available unit. Backspace / Enter / End turn: complete work and refresh movement.
-- B / Found colony: Free Colonist schedules a settlement for next turn; the colonist is consumed on completion.
+- B / Found colony: Free Colonist schedules a settlement for next turn; the founder becomes the first town resident on completion.
 - P / Clear forest: Pioneer schedules clearing for next turn.
 - Right-click a neighboring ship with a land unit: board if there is capacity.
 - Right-click adjacent land with a loaded ship, or press Disembark: unload the first passenger.
 - Select a discovered Native village and choose Meet leader, or open Native nations to browse all 8.
 - Recruit / build: browse all units; recruit on the selected colony (otherwise the first colony). A land unit costs 20 Food. A ship costs 20 Lumber and requires adjacent ocean. New units move next turn.
 
-Initial units: Free Colonist, Hardy Pioneer, and Caravel at the eastern coastline. The map is deterministic (seed 334), 24 by 16 hexes. Land and ships use distinct traversable terrain. Routes use movement costs. Exploration reveals tiles within three hexes of units.
+Initial units: a Caravel at sea, with a Free Colonist and Hardy Pioneer aboard. Sail west to the coast and unload both passengers. The map is deterministic (seed 334), 24 by 16 hexes. Land and ships use distinct traversable terrain. Routes use movement costs. The Hex prefab has `Reveal On Start` enabled for the requested walkthrough, so every hex is visible. Turn it off to use exploration within three hexes of units.
+
+## Town worker assignment
+
+Select a player settlement and click **Open town [T]**, or press T. The founding Colonist becomes a town resident. Available land units standing on the town tile join it when the town opens. Residents appear in the lower-left unemployment area until assigned.
+
+The upper-right area has six drop slots for the actual neighboring world hexes around a central city image. Drag an icon from unemployment to any surrounding hex, between hexes, or back to unemployment. An occupied drop swaps the two workers. Each resident has one assignment and each work hex accepts one resident. Invalid drops restore the icon. Food and Lumber production previews and turn totals come from these assignments. The central town tile provides baseline food; unemployed residents produce no surrounding-tile output. Farmer/Fisherman and Lumberjack specializations provide a simple yield bonus.
+
+Use End turn inside the town to collect the displayed output. Exit town or Escape returns to the map. Assignments persist when reopening the town. Newly recruited units at the colony join its resident roster the next time the town opens.
 
 ## Prototype rules and remaining manual work
 
 This integration implements the available artwork in a playable foundation. It does not complete every feature in Weeks 1–13 of the production manual.
 
 - Player settlements temporarily reuse the first Native village sprite, explicitly labelled in the welcome screen; dedicated European colony art is absent from this ZIP.
-- Colony production is simplified: its tile and neighboring tiles contribute food, and forest tiles contribute lumber each turn. There is no worker assignment or 16-product production chain yet.
+- Colony production currently covers Food and Lumber from assigned workers plus baseline town food. The full 16-product production chain is not implemented.
 - Recruitment prices, movement, strength, and capacity are prototype balancing values, not historical research or a full transcription of the manual.
 - Native nations are settlements and information screens; diplomacy, combat, and Native AI are not implemented.
 - European nation selection, Europe trade/market, cargo products, resource icons, building artwork, opening illustrations, sound, save/load, and full town management are not supplied by this integration.
@@ -54,6 +62,8 @@ Use **Colonization > Import artwork and build Map01** to regenerate the scene/da
 
 ## Validation
 
-EditMode tests cover hex adjacency/distance, terrain restrictions, and all 68 distinct gameplay sprite references. PlayMode tests cover world initialization, boarding/unloading, turn completion, settlement production/recruitment, forest clearing, movement budgets, and nation UI.
+EditMode tests cover hex adjacency/distance, terrain restrictions, and all 68 distinct gameplay sprite references. PlayMode tests cover world initialization, boarding/unloading, turn completion, settlement production/recruitment, forest clearing, movement budgets, nation UI, and pointer-event drags to all six town work slots and back to unemployment.
+
+`Colonization.Walkthrough.WalkthroughVideoTests.RecordFullGameplayAndTownDragWalkthrough` records an automated playthrough directly from the running Play Mode scene with Unity's MediaEncoder. It performs the gameplay actions, dispatches drag events through the UI raycaster, checks resulting assignments/resource totals, and writes the MP4, chapter list, and final reference frames under `Deliverables`. It is an automated demonstration, not a recording of a human controlling the mouse.
 
 See `Docs/Validation.md` for executed results.
