@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Wampanoag
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Wampanoag
+  leader: Ousamequin (Massasoit)
+  date: c. 1623
+  biography: Ousamequin was a Pokanoket sachem within the Wampanoag world. A 1623 account describes a broad wampum belt and a black wolfskin over his shoulder.
+  region: Southern New England; present-day Massachusetts and Rhode Island.
+  terrain:
+  - Broadleaf Forest
+  - Prairie
+  - Swamp
+  goods:
+  - Food
+  - Fur
+  jobs:
+  - Farmers
+  - Fur Trappers
+  rival: Narragansett
+  scenarioAggression: Low
+  contextNote: Use Narragansett as a scenario rival inspired by early seventeenth-century regional tensions; alliances also changed over time.
+  sources:
+  - https://plimoth.org/yath/unit-2/wampum-belt
+  - https://plimoth.org/for-students/homework-help/what-to-wear
+  - https://plimoth.org/for-students/homework-help/building-a-home
+  - https://wampanoagtribe-nsn.gov/ancientways
+  village:
+    sprite: {fileID: 21300000, guid: 290f32b63a3126a4dbce166196042b6a, type: 3}
+    visibleCenter: {x: 0, y: 0}
+    visibleSize: {x: 2.4, y: 1.28}
+  portrait: {fileID: 21300000, guid: 5ae5b700d88aecf4e86a2b93134d86ec, type: 3}
+  emblem: {fileID: 21300000, guid: 0bf57db7eda886748bc6df462de07791, type: 3}
+  profile: {fileID: 21300000, guid: 95e22480bf867a542a3170ed59c119eb, type: 3}

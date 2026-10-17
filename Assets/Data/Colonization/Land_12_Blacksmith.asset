@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e837a530dffac4897fe347b962ba21, type: 3}
+  m_Name: Land_12_Blacksmith
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.UnitData
+  displayName: Blacksmith
+  art:
+    sprite: {fileID: 21300000, guid: 14164c599f34e1f46ab5202aea720186, type: 3}
+    visibleCenter: {x: 0.005, y: 0.005}
+    visibleSize: {x: 1.35, y: 2.35}
+  naval: 0
+  pioneer: 0
+  colonist: 0
+  movement: 3
+  strength: 1
+  capacity: 0

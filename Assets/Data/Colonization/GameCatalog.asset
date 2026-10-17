@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc32454d85f8cc488dd9057609355ab, type: 3}
+  m_Name: GameCatalog
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.GameCatalog
+  terrains:
+  - {fileID: 11400000, guid: e7fd61382b198874db93a16a13de8f43, type: 2}
+  - {fileID: 11400000, guid: d449ff03ea8014045a169cd2a022b744, type: 2}
+  - {fileID: 11400000, guid: 6d897553b7fdeaa45820ab63620578b1, type: 2}
+  - {fileID: 11400000, guid: 2d3a938d1f0d606459349cb4ebc33b76, type: 2}
+  - {fileID: 11400000, guid: ba34a72bc2e6b7941ac57ef4fffac231, type: 2}
+  - {fileID: 11400000, guid: 108a9b3ef626d9142861e5e7aaa7baf6, type: 2}
+  - {fileID: 11400000, guid: ddca6dcffdd31a94f9eb6b5cd8e06d7e, type: 2}
+  - {fileID: 11400000, guid: a2ac6c73bcb4e2b47a93a9f7b3c3add8, type: 2}
+  - {fileID: 11400000, guid: 299257485b155dc48966ece66a3ca76a, type: 2}
+  - {fileID: 11400000, guid: b017004b9d15f024f8a0181f3229e37d, type: 2}
+  - {fileID: 11400000, guid: 749f93f1e9512a746b2d8c9345eef7ce, type: 2}
+  landUnits:
+  - {fileID: 11400000, guid: 74c616028d223f74a938f7c149950ced, type: 2}
+  - {fileID: 11400000, guid: 6947077defecc4442b00d29096ffa5b5, type: 2}
+  - {fileID: 11400000, guid: e7432c9d656c9504db7643766d12a02f, type: 2}
+  - {fileID: 11400000, guid: 8cdf697772a93844eabb3d32de8176f9, type: 2}
+  - {fileID: 11400000, guid: d7c2271620138c24ea85e49826139bee, type: 2}
+  - {fileID: 11400000, guid: 542ba9f7e03684948bb1eac29f25a211, type: 2}
+  - {fileID: 11400000, guid: 6d701a220ccbea14e85d8a453905094f, type: 2}
+  - {fileID: 11400000, guid: ef7422907acdc92458c3a3f6bf385344, type: 2}
+  - {fileID: 11400000, guid: 91e449658e8d41348b78c00078ebcdd2, type: 2}
+  - {fileID: 11400000, guid: 103d5fba32bdc3e498c71e147605f3f1, type: 2}
+  - {fileID: 11400000, guid: 71af45a6312deb445a4acf9e6939b66e, type: 2}
+  - {fileID: 11400000, guid: 3072c44fbbd88434f8bd5cc8962eca8b, type: 2}
+  - {fileID: 11400000, guid: da32a0e011dfca347a6a7e968f87ecab, type: 2}
+  - {fileID: 11400000, guid: bff39e632d47a8c4293424727cee46ab, type: 2}
+  - {fileID: 11400000, guid: e11d2718ca364694981e93b68bef087a, type: 2}
+  - {fileID: 11400000, guid: cbe2c62f64ff1984eaf61c123d480ab3, type: 2}
+  - {fileID: 11400000, guid: 743abe6ddbcb42f409e027da3a7c38ba, type: 2}
+  - {fileID: 11400000, guid: d8da3ea8e25aa9d4da0d791865aff8dd, type: 2}
+  - {fileID: 11400000, guid: 65908a9e61c804741bce1bb558e93746, type: 2}
+  - {fileID: 11400000, guid: 6957a423d3df69e48b3f3c04106c905e, type: 2}
+  ships:
+  - {fileID: 11400000, guid: bffbfc49edfb4df48b9297d3160fd8b6, type: 2}
+  - {fileID: 11400000, guid: a9a96d9fa6e4bd14c8f31b46b9336009, type: 2}
+  - {fileID: 11400000, guid: 27496cc600c59ab4e8c4f81dfb6471bf, type: 2}
+  - {fileID: 11400000, guid: 862437155a1f03a4fa68d8c1827b4e12, type: 2}
+  - {fileID: 11400000, guid: b621f8757c717c145ad209bcc2b243b2, type: 2}
+  - {fileID: 11400000, guid: c64e67a6062f1614e9ced51c72578e1d, type: 2}
+  nativeNations:
+  - {fileID: 11400000, guid: 52ccc572b548d034ea488e9890e1e71a, type: 2}
+  - {fileID: 11400000, guid: 03104e7339acfbb4a9608560ddb984ea, type: 2}
+  - {fileID: 11400000, guid: dbe7651f219dd174c88794b4eda1a4ad, type: 2}
+  - {fileID: 11400000, guid: 124d5cd80b1b89b4fad7a313c47c45ac, type: 2}
+  - {fileID: 11400000, guid: 0241089c2170fe34b997dbb5461a90cf, type: 2}
+  - {fileID: 11400000, guid: a6f3409faf42f924593bead4160c82d1, type: 2}
+  - {fileID: 11400000, guid: 344e1b0b15ecc2c4f9dd3b1501ca2a14, type: 2}
+  - {fileID: 11400000, guid: f0ec4ec9dd669bb4182ee8d67347bf4e, type: 2}

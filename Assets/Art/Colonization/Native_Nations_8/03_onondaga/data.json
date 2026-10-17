@@ -1,0 +1,31 @@
+{
+  "id": "onondaga",
+  "name": "Onondaga (Haudenosaunee)",
+  "leader": "Garakontie",
+  "date": "c. 1660s",
+  "terrain": [
+    "Broadleaf Forest",
+    "Mixed Forest",
+    "Prairie"
+  ],
+  "goods": [
+    "Food",
+    "Fur"
+  ],
+  "jobs": [
+    "Farmers",
+    "Fur Trappers"
+  ],
+  "enemy": "Wendat",
+  "aggressive": "Medium",
+  "region": "Central present-day New York; Great Lakes and northeastern woodlands.",
+  "bio": "Garakontie was an Onondaga chief and important seventeenth-century diplomat. He represents Onondaga here, not an absolute monarch of all Haudenosaunee nations.",
+  "note": "Wendat rivalry references seventeenth-century Haudenosaunee-Wendat conflicts; Garakontie's own career also included sustained peace negotiations.",
+  "flag": "One longhouse on a deep purple field. Original architectural emblem; not a reproduction of the Hiawatha Belt or a modern Haudenosaunee flag.",
+  "sources": [
+    "https://www.biographi.ca/en/bio/294",
+    "https://www.onondaganation.org/culture/homes/",
+    "https://www.nps.gov/articles/historic-contact-part-iii.htm"
+  ],
+  "folder": "03_onondaga"
+}

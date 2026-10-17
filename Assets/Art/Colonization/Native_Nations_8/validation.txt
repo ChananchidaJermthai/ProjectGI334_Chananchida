@@ -1,0 +1,17 @@
+01_wampanoag/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+01_wampanoag/village_256x256.png: (256, 256), RGBA, transparent corners
+02_powhatan/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+02_powhatan/village_256x256.png: (256, 256), RGBA, transparent corners
+03_onondaga/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+03_onondaga/village_256x256.png: (256, 256), RGBA, transparent corners
+04_wendat/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+04_wendat/village_256x256.png: (256, 256), RGBA, transparent corners
+05_lenape/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+05_lenape/village_256x256.png: (256, 256), RGBA, transparent corners
+06_narragansett/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+06_narragansett/village_256x256.png: (256, 256), RGBA, transparent corners
+07_pequot/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+07_pequot/village_256x256.png: (256, 256), RGBA, transparent corners
+08_mexica/leader_512x1024.png: (512, 1024), RGBA, transparent corners
+08_mexica/village_256x256.png: (256, 256), RGBA, transparent corners
+8 distinct SVG flags; 8 PNG flags; 8 profile pages.

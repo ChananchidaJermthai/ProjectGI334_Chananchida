@@ -1,0 +1,31 @@
+{
+  "id": "mexica",
+  "name": "Mexica (Aztec)",
+  "leader": "Moctezuma II",
+  "date": "c. 1519",
+  "terrain": [
+    "Plain",
+    "Prairie",
+    "Swamp"
+  ],
+  "goods": [
+    "Food",
+    "Cotton"
+  ],
+  "jobs": [
+    "Farmers",
+    "Cotton Planters"
+  ],
+  "enemy": "Tlaxcalteca",
+  "aggressive": "High",
+  "region": "Basin of Mexico; Tenochtitlan and the wider Mexica tribute network.",
+  "bio": "Moctezuma II was the Mexica tlatoani at the arrival of Cortes in 1519. The city icon uses masonry buildings, twin temple shrines, canals and chinampa gardens.",
+  "note": "Cotton includes exchange and tribute from warmer regions; it does not imply cotton plantations in the highland capital. Tlaxcalteca is a documented rival polity.",
+  "flag": "Stepped garden geometry over water on turquoise. Original landscape emblem; not Mexico's modern eagle flag or a claimed Aztec national flag.",
+  "sources": [
+    "https://www.metmuseum.org/essays/tenochtitlan",
+    "https://82nd-and-fifth.metmuseum.org/toah/ht/08/canm.html",
+    "https://lugares.inah.gob.mx/en/pagina-de-elemento/2314"
+  ],
+  "folder": "08_mexica"
+}

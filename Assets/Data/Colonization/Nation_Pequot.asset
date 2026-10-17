@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Pequot
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Pequot
+  leader: Sassacus
+  date: c. 1636
+  biography: Sassacus was a Pequot sachem during the 1630s. The village design uses bark-covered dwellings and a palisade associated with fortified settlements of the period.
+  region: Coastal southeastern Connecticut and adjacent southern New England.
+  terrain:
+  - Broadleaf Forest
+  - Prairie
+  - Swamp
+  goods:
+  - Food
+  - Fur
+  jobs:
+  - Farmers
+  - Fur Trappers
+  rival: Mohegan
+  scenarioAggression: High
+  contextNote: Mohegan is a scenario rival in the context of the Pequot War. High aggression is solely an editable AI balance setting, not a characterization of Pequot people.
+  sources:
+  - https://www.pequotmuseum.org/explore/exhibits/
+  - https://www.pequotmuseum.org/explore/exhibits/battlefields-of-the-pequot-war/
+  - https://en.wikipedia.org/wiki/Sassacus
+  village:
+    sprite: {fileID: 21300000, guid: 78d5b16bf9004354687db85ff249d17f, type: 3}
+    visibleCenter: {x: 0, y: 0}
+    visibleSize: {x: 2.4, y: 1.62}
+  portrait: {fileID: 21300000, guid: 5bd36f182aa4a7541a4be5d15a2edba1, type: 3}
+  emblem: {fileID: 21300000, guid: d4057ec113149424db42d24916ad95b2, type: 3}
+  profile: {fileID: 21300000, guid: 1ffedf655fd38dd4db7af878a37f910a, type: 3}

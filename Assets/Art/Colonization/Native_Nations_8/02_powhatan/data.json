@@ -1,0 +1,31 @@
+{
+  "id": "powhatan",
+  "name": "Powhatan",
+  "leader": "Wahunsenacawh",
+  "date": "c. 1607",
+  "terrain": [
+    "Broadleaf Forest",
+    "Prairie",
+    "Swamp"
+  ],
+  "goods": [
+    "Food",
+    "Tobacco"
+  ],
+  "jobs": [
+    "Farmers",
+    "Tobacco Planters"
+  ],
+  "enemy": "Monacan",
+  "aggressive": "Medium",
+  "region": "Tidewater Virginia and the Chesapeake coastal plain.",
+  "bio": "Wahunsenacawh was the paramount chief known to the English as Powhatan. He led a chiefdom of multiple communities when Jamestown was founded in 1607.",
+  "note": "Monacan is a documented regional rival. Food reflects maize agriculture; Tobacco is a simplified game category for Indigenous tobacco, not a European plantation uniform.",
+  "flag": "Maize above a branching river on rust red. New game emblem inspired by Tidewater agriculture and waterways.",
+  "sources": [
+    "https://www.nps.gov/people/powhatan.htm",
+    "https://www.nps.gov/cajo/planyourvisit/werowocomoco.htm",
+    "https://www.nps.gov/prwi/learn/historyculture/americanindian.htm"
+  ],
+  "folder": "02_powhatan"
+}

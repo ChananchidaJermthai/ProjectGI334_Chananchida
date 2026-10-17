@@ -1,0 +1,31 @@
+{
+  "id": "pequot",
+  "name": "Pequot",
+  "leader": "Sassacus",
+  "date": "c. 1636",
+  "terrain": [
+    "Broadleaf Forest",
+    "Prairie",
+    "Swamp"
+  ],
+  "goods": [
+    "Food",
+    "Fur"
+  ],
+  "jobs": [
+    "Farmers",
+    "Fur Trappers"
+  ],
+  "enemy": "Mohegan",
+  "aggressive": "High",
+  "region": "Coastal southeastern Connecticut and adjacent southern New England.",
+  "bio": "Sassacus was a Pequot sachem during the 1630s. The village design uses bark-covered dwellings and a palisade associated with fortified settlements of the period.",
+  "note": "Mohegan is a scenario rival in the context of the Pequot War. High aggression is solely an editable AI balance setting, not a characterization of Pequot people.",
+  "flag": "A palisade gateway on ochre with a red central panel. Original emblem inspired by settlement architecture.",
+  "sources": [
+    "https://www.pequotmuseum.org/explore/exhibits/",
+    "https://www.pequotmuseum.org/explore/exhibits/battlefields-of-the-pequot-war/",
+    "https://en.wikipedia.org/wiki/Sassacus"
+  ],
+  "folder": "07_pequot"
+}

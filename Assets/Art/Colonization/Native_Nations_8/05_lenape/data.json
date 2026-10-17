@@ -1,0 +1,31 @@
+{
+  "id": "lenape",
+  "name": "Lenape",
+  "leader": "Tamanend",
+  "date": "c. 1683",
+  "terrain": [
+    "Broadleaf Forest",
+    "Mixed Forest",
+    "Prairie"
+  ],
+  "goods": [
+    "Food",
+    "Fur"
+  ],
+  "jobs": [
+    "Farmers",
+    "Fur Trappers"
+  ],
+  "enemy": "Susquehannock",
+  "aggressive": "Low",
+  "region": "Delaware Valley; present-day Pennsylvania, New Jersey, Delaware and nearby areas.",
+  "bio": "Tamanend was a Lenape village sachem documented in late seventeenth-century Pennsylvania. He was not a king ruling all Lenape communities.",
+  "note": "Susquehannock rivalry refers to earlier conflicts in the 1620s-1630s, not a claim that Tamanend fought them in 1683. Food and Fur match farming and winter hunting.",
+  "flag": "Two leaves flanking a river on forest green. Original landscape emblem, not a Lenape clan or tribal seal.",
+  "sources": [
+    "https://www.ustwp.org/government/boards-commissions/historical-advisory-board/chief-tamanend/",
+    "https://delawaretribe.org/cultural-education/culture-and-language/lenape-clothing-3/",
+    "https://en.wikipedia.org/wiki/Susquehannock"
+  ],
+  "folder": "05_lenape"
+}

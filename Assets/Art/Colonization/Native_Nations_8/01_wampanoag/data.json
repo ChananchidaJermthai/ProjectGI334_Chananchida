@@ -1,0 +1,32 @@
+{
+  "id": "wampanoag",
+  "name": "Wampanoag",
+  "leader": "Ousamequin (Massasoit)",
+  "date": "c. 1623",
+  "terrain": [
+    "Broadleaf Forest",
+    "Prairie",
+    "Swamp"
+  ],
+  "goods": [
+    "Food",
+    "Fur"
+  ],
+  "jobs": [
+    "Farmers",
+    "Fur Trappers"
+  ],
+  "enemy": "Narragansett",
+  "aggressive": "Low",
+  "region": "Southern New England; present-day Massachusetts and Rhode Island.",
+  "bio": "Ousamequin was a Pokanoket sachem within the Wampanoag world. A 1623 account describes a broad wampum belt and a black wolfskin over his shoulder.",
+  "note": "Use Narragansett as a scenario rival inspired by early seventeenth-century regional tensions; alliances also changed over time.",
+  "flag": "A rising sun above two coastal waves. A new landscape-based game emblem, not a historical national flag.",
+  "sources": [
+    "https://plimoth.org/yath/unit-2/wampum-belt",
+    "https://plimoth.org/for-students/homework-help/what-to-wear",
+    "https://plimoth.org/for-students/homework-help/building-a-home",
+    "https://wampanoagtribe-nsn.gov/ancientways"
+  ],
+  "folder": "01_wampanoag"
+}

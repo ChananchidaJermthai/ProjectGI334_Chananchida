@@ -1,0 +1,31 @@
+{
+  "id": "narragansett",
+  "name": "Narragansett",
+  "leader": "Miantonomi",
+  "date": "c. 1640",
+  "terrain": [
+    "Broadleaf Forest",
+    "Prairie",
+    "Swamp"
+  ],
+  "goods": [
+    "Food",
+    "Tobacco"
+  ],
+  "jobs": [
+    "Farmers",
+    "Tobacco Planters"
+  ],
+  "enemy": "Pequot",
+  "aggressive": "Medium",
+  "region": "Narragansett Bay and present-day Rhode Island.",
+  "bio": "Miantonomi was a Narragansett sachem active in the early seventeenth century. His recorded speech is a source for understanding Indigenous responses to colonial expansion.",
+  "note": "Pequot rivalry refers to the Pequot War period of 1636-1638, before this approximate portrait date. Tobacco Planters is a game abstraction for local cultivation.",
+  "flag": "A stylized shell above coastal waves on indigo. New game emblem referring to coastal resources and shell working.",
+  "sources": [
+    "https://plimoth.org/yath/unit-2/excerpt-from-speech-made-by-narragansett-sachem-miantonomi",
+    "https://www.pequotmuseum.org/explore/exhibits/battlefields-of-the-pequot-war/",
+    "https://en.wikipedia.org/wiki/Miantonomoh"
+  ],
+  "folder": "06_narragansett"
+}

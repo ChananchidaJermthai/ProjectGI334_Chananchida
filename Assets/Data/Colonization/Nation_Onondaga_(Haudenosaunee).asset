@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Onondaga_(Haudenosaunee)
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Onondaga (Haudenosaunee)
+  leader: Garakontie
+  date: c. 1660s
+  biography: Garakontie was an Onondaga chief and important seventeenth-century diplomat. He represents Onondaga here, not an absolute monarch of all Haudenosaunee nations.
+  region: Central present-day New York; Great Lakes and northeastern woodlands.
+  terrain:
+  - Broadleaf Forest
+  - Mixed Forest
+  - Prairie
+  goods:
+  - Food
+  - Fur
+  jobs:
+  - Farmers
+  - Fur Trappers
+  rival: Wendat
+  scenarioAggression: Medium
+  contextNote: Wendat rivalry references seventeenth-century Haudenosaunee-Wendat conflicts; Garakontie's own career also included sustained peace negotiations.
+  sources:
+  - https://www.biographi.ca/en/bio/294
+  - https://www.onondaganation.org/culture/homes/
+  - https://www.nps.gov/articles/historic-contact-part-iii.htm
+  village:
+    sprite: {fileID: 21300000, guid: bffa033554640514888eba3dd0d705dc, type: 3}
+    visibleCenter: {x: 0, y: 0}
+    visibleSize: {x: 2.4, y: 1.36}
+  portrait: {fileID: 21300000, guid: cb2c5dd566a61b54d9bf9543e059b5d4, type: 3}
+  emblem: {fileID: 21300000, guid: 5227e9cb7f1bedf428505910f1cc6562, type: 3}
+  profile: {fileID: 21300000, guid: 148d163277c8bcb4fab18bbd632d9770, type: 3}

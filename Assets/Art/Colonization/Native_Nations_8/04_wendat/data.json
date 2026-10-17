@@ -1,0 +1,30 @@
+{
+  "id": "wendat",
+  "name": "Wendat",
+  "leader": "Kondiaronk",
+  "date": "c. 1690",
+  "terrain": [
+    "Mixed Forest",
+    "Broadleaf Forest",
+    "Prairie"
+  ],
+  "goods": [
+    "Food",
+    "Fur"
+  ],
+  "jobs": [
+    "Farmers",
+    "Fur Trappers"
+  ],
+  "enemy": "Haudenosaunee",
+  "aggressive": "Low",
+  "region": "Great Lakes region; Kondiaronk's community was associated with Michilimackinac.",
+  "bio": "Kondiaronk was a Tionontati-Wendat leader and diplomat. This c. 1690 depiction precedes his major role in the Great Peace of Montreal in 1701.",
+  "note": "The faction uses the broad Wendat label with Kondiaronk's Tionontati background stated explicitly. Haudenosaunee is a historical scenario rival, not a permanent enemy.",
+  "flag": "A canoe and paired paddles on dark teal, referencing Great Lakes travel. Original game emblem.",
+  "sources": [
+    "https://pacmusee.qc.ca/en/stories-of-montreal/article/kondiaronk-broker-of-the-great-peace-of-montreal/",
+    "https://thecanadianencyclopedia.ca/en/article/kondiaronk"
+  ],
+  "folder": "04_wendat"
+}

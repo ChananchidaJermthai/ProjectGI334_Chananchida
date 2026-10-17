@@ -1,0 +1,6 @@
+{
+  "name": "Colonization.Editor",
+  "rootNamespace": "Colonization.Editor",
+  "references": ["Colonization.Runtime"],
+  "includePlatforms": ["Editor"]
+}

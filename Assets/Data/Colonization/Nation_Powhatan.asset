@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Powhatan
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Powhatan
+  leader: Wahunsenacawh
+  date: c. 1607
+  biography: Wahunsenacawh was the paramount chief known to the English as Powhatan. He led a chiefdom of multiple communities when Jamestown was founded in 1607.
+  region: Tidewater Virginia and the Chesapeake coastal plain.
+  terrain:
+  - Broadleaf Forest
+  - Prairie
+  - Swamp
+  goods:
+  - Food
+  - Tobacco
+  jobs:
+  - Farmers
+  - Tobacco Planters
+  rival: Monacan
+  scenarioAggression: Medium
+  contextNote: Monacan is a documented regional rival. Food reflects maize agriculture; Tobacco is a simplified game category for Indigenous tobacco, not a European plantation uniform.
+  sources:
+  - https://www.nps.gov/people/powhatan.htm
+  - https://www.nps.gov/cajo/planyourvisit/werowocomoco.htm
+  - https://www.nps.gov/prwi/learn/historyculture/americanindian.htm
+  village:
+    sprite: {fileID: 21300000, guid: c27b9c692d9881a4483866cb034960a8, type: 3}
+    visibleCenter: {x: 0.005, y: 0.005}
+    visibleSize: {x: 2.39, y: 1.79}
+  portrait: {fileID: 21300000, guid: a2ce7b9817d38494794697400e2a865c, type: 3}
+  emblem: {fileID: 21300000, guid: 4f1bf650b5565854d8e10f2a38fe30f2, type: 3}
+  profile: {fileID: 21300000, guid: 82e2a11154c330a4dba1309e8d639cba, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e837a530dffac4897fe347b962ba21, type: 3}
+  m_Name: Land_10_Carpenter
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.UnitData
+  displayName: Carpenter
+  art:
+    sprite: {fileID: 21300000, guid: b91e65d36f158024c957fea9938bf005, type: 3}
+    visibleCenter: {x: -0.05, y: 0.005}
+    visibleSize: {x: 1.18, y: 2.31}
+  naval: 0
+  pioneer: 0
+  colonist: 0
+  movement: 3
+  strength: 1
+  capacity: 0

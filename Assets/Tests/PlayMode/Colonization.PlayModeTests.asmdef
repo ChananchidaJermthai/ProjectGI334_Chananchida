@@ -1,0 +1,6 @@
+{
+  "name": "Colonization.PlayModeTests",
+  "references": ["Colonization.Runtime", "Unity.ugui", "Unity.RenderPipelines.Universal.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"]
+}

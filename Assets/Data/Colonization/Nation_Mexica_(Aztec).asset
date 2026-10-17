@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Mexica_(Aztec)
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Mexica (Aztec)
+  leader: Moctezuma II
+  date: c. 1519
+  biography: Moctezuma II was the Mexica tlatoani at the arrival of Cortes in 1519. The city icon uses masonry buildings, twin temple shrines, canals and chinampa gardens.
+  region: Basin of Mexico; Tenochtitlan and the wider Mexica tribute network.
+  terrain:
+  - Plain
+  - Prairie
+  - Swamp
+  goods:
+  - Food
+  - Cotton
+  jobs:
+  - Farmers
+  - Cotton Planters
+  rival: Tlaxcalteca
+  scenarioAggression: High
+  contextNote: Cotton includes exchange and tribute from warmer regions; it does not imply cotton plantations in the highland capital. Tlaxcalteca is a documented rival polity.
+  sources:
+  - https://www.metmuseum.org/essays/tenochtitlan
+  - https://82nd-and-fifth.metmuseum.org/toah/ht/08/canm.html
+  - https://lugares.inah.gob.mx/en/pagina-de-elemento/2314
+  village:
+    sprite: {fileID: 21300000, guid: 3281df39c941a1e4892fd0a3203ad514, type: 3}
+    visibleCenter: {x: 0, y: 0.005}
+    visibleSize: {x: 2.4, y: 1.87}
+  portrait: {fileID: 21300000, guid: 6e996b3c54754d84e95faafc74b6ad14, type: 3}
+  emblem: {fileID: 21300000, guid: 94cd3a8e8a49f9a47be37f27a2a9336a, type: 3}
+  profile: {fileID: 21300000, guid: 92de2a08e005d0044a60ef0ea6e98ab9, type: 3}

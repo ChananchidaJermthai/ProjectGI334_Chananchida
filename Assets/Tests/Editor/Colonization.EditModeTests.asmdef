@@ -1,0 +1,6 @@
+{
+  "name": "Colonization.EditModeTests",
+  "references": ["Colonization.Runtime", "Colonization.Editor"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

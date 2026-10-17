@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4399e8d1ab5c246b3443162455de9c, type: 3}
+  m_Name: Nation_Wendat
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.NativeNationData
+  displayName: Wendat
+  leader: Kondiaronk
+  date: c. 1690
+  biography: Kondiaronk was a Tionontati-Wendat leader and diplomat. This c. 1690 depiction precedes his major role in the Great Peace of Montreal in 1701.
+  region: Great Lakes region; Kondiaronk's community was associated with Michilimackinac.
+  terrain:
+  - Mixed Forest
+  - Broadleaf Forest
+  - Prairie
+  goods:
+  - Food
+  - Fur
+  jobs:
+  - Farmers
+  - Fur Trappers
+  rival: Haudenosaunee
+  scenarioAggression: Low
+  contextNote: The faction uses the broad Wendat label with Kondiaronk's Tionontati background stated explicitly. Haudenosaunee is a historical scenario rival, not a permanent enemy.
+  sources:
+  - https://pacmusee.qc.ca/en/stories-of-montreal/article/kondiaronk-broker-of-the-great-peace-of-montreal/
+  - https://thecanadianencyclopedia.ca/en/article/kondiaronk
+  village:
+    sprite: {fileID: 21300000, guid: 5f36e4ace1413c04a9fd7f518b647e52, type: 3}
+    visibleCenter: {x: 0, y: 0.005}
+    visibleSize: {x: 2.4, y: 1.69}
+  portrait: {fileID: 21300000, guid: 83491901f4505e2419df0e958f84f876, type: 3}
+  emblem: {fileID: 21300000, guid: b29698a26b1f31a44b0c67380b537e81, type: 3}
+  profile: {fileID: 21300000, guid: e3967afb22063474c9c5dadbdcb2a454, type: 3}

@@ -1,0 +1,5 @@
+{
+  "name": "Colonization.Runtime",
+  "rootNamespace": "Colonization",
+  "references": ["Unity.InputSystem", "Unity.ugui"]
+}

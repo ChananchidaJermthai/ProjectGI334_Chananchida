@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5f600d8f47f504b96c50b518b18efc, type: 3}
+  m_Name: Terrain_Arctic
+  m_EditorClassIdentifier: Colonization.Runtime::Colonization.HexData
+  kind: 8
+  terrain:
+    sprite: {fileID: 21300000, guid: b1047956f5077044f9195d5280a51fb2, type: 3}
+    visibleCenter: {x: 0.01, y: -2.56}
+    visibleSize: {x: 9.12, y: 10.06}
+  forest:
+    sprite: {fileID: 0}
+    visibleCenter: {x: 0, y: 0}
+    visibleSize: {x: 1, y: 1}
+  moveCost: 1
+  foodYield: 0
